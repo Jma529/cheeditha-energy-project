@@ -1,0 +1,203 @@
+
+.page-header {
+	position: relative;
+	background-color: $color__background-body;
+	background-position: center center;
+	background-size: cover;
+	background-repeat: no-repeat;
+  
+	.overlay {
+	  opacity: 0.7;
+	}
+  
+	.hero-content {
+	  position: relative;
+	  display: flex;
+	  flex-direction: column;
+	  justify-content: center;
+	  min-height: 500px;
+	  padding: 80px 0;
+  
+	  @include breakpoint(md) {
+		padding: 120px 0;
+	  }
+	}
+  
+	.entry-title {
+	  display: block;
+	  margin: 0;
+	}
+  
+	.entry-sub-title {
+	  display: block;
+	}
+  
+	.actions {
+	  display: inline-flex;
+	  width: 100%;
+	}
+  }
+  
+  .has-sub-nav {
+  
+	.page-header {
+	  padding-top: 50px;
+	}
+  }
+.header {
+	max-width: 50%;
+
+		.header-wrapper {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+}
+  
+.main-navigation {
+	display: flex;
+	text-align: center;
+
+	.menu-items {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	ul {
+		display: none;
+		list-style: none;
+		margin: 0;
+		padding-left: 0;
+
+		ul {
+			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+			float: left;
+			position: absolute;
+			top: 100%;
+			left: -999em;
+			z-index: 99999;
+
+			ul {
+				left: -999em;
+				top: 0;
+			}
+
+			li {
+
+				&:hover > ul,
+				&.focus > ul {
+					display: block;
+					left: auto;
+				}
+			}
+
+			a {
+				width: 200px;
+			}
+
+			:hover > a,
+			.focus > a {
+			}
+
+			a:hover,
+			a.focus {
+			}
+		}
+
+		li:hover > ul,
+		li.focus > ul {
+			left: auto;
+		}
+	}
+
+	li {
+		position: relative;
+
+		&:hover > a,
+		&.focus > a {
+		}
+	}
+
+	a {
+		display: block;
+		text-decoration: none;
+	}
+
+	.current_page_item > a,
+	.current-menu-item > a,
+	.current_page_ancestor > a,
+	.current-menu-ancestor > a {
+	}
+}
+
+/* Small menu. */
+.menu-toggle,
+.main-navigation.toggled ul {
+	display: block;
+}
+
+.menu-toggle {
+	display: none;
+}
+
+.main-navigation ul {
+	display: flex;
+	flex-direction: column;
+}
+
+
+.comment-navigation,
+.posts-navigation,
+.post-navigation {
+
+	.site-main & {
+		margin: 0 0 1.5em;
+	}
+
+	.nav-links {
+		display: flex;
+	}
+
+	.nav-previous {
+		flex: 1 0 50%;
+	}
+
+	.nav-next {
+		text-align: end;
+		flex: 1 0 50%;
+	}
+}
+.vertical-line {
+		width: 2px;
+		height: 50px;
+		background-color: black;
+	}
+//=============================================================================================================
+// Logo
+//=============================================================================================================
+
+.header {
+
+	.site-logo {
+	  margin: 12px 0;
+	  border-radius: 100px;
+  
+	  @include breakpoint(sm) {
+		margin: 16px 0;
+		  }
+  
+	  .logo {
+		display: block;
+		width: 220px;
+		margin-right: 20px;
+	
+		@include breakpoint(xs) {
+		  width: 154px;
+		  height: 44px;
+		}
+	  }
+	}
+  }
+  
+  

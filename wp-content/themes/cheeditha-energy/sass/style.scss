@@ -1,0 +1,130 @@
+/*!
+Theme Name: Cheeditha-energy
+Theme URI: https://underscores.me/
+Author: Automattic
+Author URI: https://automattic.com/
+Description: Hi. I'm a starter theme called <code>Cheeditha-energy</code>, or <em>underscores</em>, if you like. I'm a theme meant for hacking so don't use me as a <em>Parent Theme</em>. Instead try turning me into the next, most awesome, WordPress theme out there. That's what I'm here for.
+Version: 1.0.0
+Tested up to: 5.4
+Requires PHP: 5.6
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: Cheeditha-energy
+Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned.
+
+Cheeditha-energy is based on Underscores https://underscores.me/, (C) 2012-2020 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
+*/
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Utilities
+	- Accessibility
+	- Alignments
+	- Mixins
+	- Variables 
+# Admin
+	- Admin Login
+	- Admin Skin
+# Base
+	- Body
+	- Type
+# Components
+	- Buttons
+	- Footer
+	- Forms
+	- Galleries
+	- Global elements
+	- Header
+	- Hr
+	- Inputs
+	- Links
+	- Lists
+	- Media
+	- Social links
+	- Tables
+	- Widgets
+# Layouts
+	- Sidebar
+	- No Sidebar
+	- Posts and pages
+	- Sidebar Content
+# Generic
+	- Box sizing
+	- Normalize
+# plugins
+	- Jetpack infinite scroll
+	- Woocommerce
+
+
+/*--------------------------------------------------------------
+# Utilities
+--------------------------------------------------------------*/
+@import '1-utilities/accessibility';
+@import '1-utilities/fonts';
+@import '1-utilities/mixins';
+@import '1-utilities/reset';
+@import '1-utilities/variables';
+
+/*--------------------------------------------------------------
+# Admin
+--------------------------------------------------------------*/
+@import '2-admin/admin-login';
+@import '2-admin/admin-skin';
+
+
+/*--------------------------------------------------------------
+# Base
+--------------------------------------------------------------*/
+@import '3-base/body';
+@import '3-base/type';
+
+
+/*--------------------------------------------------------------
+# Components
+--------------------------------------------------------------*/
+@import '4-components/buttons';
+@import '4-components/footer';
+@import '4-components/forms';
+@import '4-components/galleries';
+@import '4-components/global-elements';
+@import '4-components/header';
+@import '4-components/hr';
+@import '4-components/inputs';
+@import '4-components/links';
+@import '4-components/lists';
+@import '4-components/media';
+@import '4-components/social-links';
+@import '4-components/tables';
+@import '4-components/widgets';
+
+/*--------------------------------------------------------------
+# Layouts
+--------------------------------------------------------------*/
+// @import "layouts/content-sidebar"; // Uncomment this line for a sidebar on right side of your content.
+// @import "layouts/sidebar-content"; // Uncomment this line for a sidebar on left side of your content.
+
+@import '5-layouts/posts-and-pages';
+
+/*--------------------------------------------------------------
+# Generic
+--------------------------------------------------------------*/
+
+@import "generic/box-sizing";
+@import "generic/normalize";
+
+
+/*--------------------------------------------------------------
+# Plugins
+--------------------------------------------------------------*/
+
+/* Jetpack infinite scroll
+--------------------------------------------- */
+@import "plugins/jetpack/infinite-scroll";
