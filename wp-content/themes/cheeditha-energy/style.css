@@ -592,6 +592,10 @@ input[type=submit]:focus {
   display: block;
 }
 
+.flex {
+  display: flex;
+}
+
 .page-header {
   position: relative;
   background-color: #fff;
@@ -632,12 +636,14 @@ input[type=submit]:focus {
 }
 
 .header {
-  max-width: 50%;
+  width: 50vw;
 }
 .header .header-wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  height: 100vh;
 }
 
 .main-navigation {
@@ -684,6 +690,8 @@ input[type=submit]:focus {
 .main-navigation a {
   display: block;
   text-decoration: none;
+  font-size: 18px;
+  margin: 15px 0;
 }
 /* Small menu. */
 .menu-toggle,
@@ -723,9 +731,10 @@ input[type=submit]:focus {
 }
 
 .vertical-line {
-  width: 2px;
+  width: 0.5px;
   height: 50px;
   background-color: black;
+  margin-bottom: 20px;
 }
 
 .header .site-logo {
@@ -739,8 +748,7 @@ input[type=submit]:focus {
 }
 .header .site-logo .logo {
   display: block;
-  width: 220px;
-  margin-right: 20px;
+  width: 300px;
 }
 @media only screen and (max-width: 576px) {
   .header .site-logo .logo {
@@ -974,6 +982,15 @@ table {
 .page-links {
   clear: both;
   margin: 0 0 1.5em;
+}
+
+.animation-wrap {
+  width: 50%;
+  height: 100%;
+}
+.animation-wrap video {
+  width: 50vw;
+  height: 100%;
 }
 
 /*--------------------------------------------------------------
