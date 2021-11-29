@@ -602,6 +602,7 @@ input[type=submit]:focus {
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
+  color: black;
 }
 .page-header .overlay {
   opacity: 0.7;
