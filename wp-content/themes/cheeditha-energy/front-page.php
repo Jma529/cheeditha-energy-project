@@ -17,6 +17,17 @@ get_header(); ?>
   </video>
 </div>
 
+<!-- Our story -->
+<section class="slide-in black" id="our-story">
+  <div class="wrapper">
+    <div class="content">
+      <h1>Our mission</h1>
+    </div>
+
+  </div>
+
+
+</section>
 
 
 
