@@ -1,6 +1,3 @@
-.front-page {
-  background: image('../../Media/')
-}
 
 
 
@@ -10,18 +7,25 @@
 
   video {
     width: 50vw;
-    height: 100%;
+    position: relative;
+    bottom: 10%;
+
+    @include breakpoint(lg){
+      height: 100%;
+    }
   }
 }
 
 .slide-in {
-
+  display: none;
+&.active {
+  display: flex;
   width: 50vw;
   height: 100vh;
   position: absolute;
   top: 0;
   right: 0;
-
+}
   &.black {
     background: $color__backgroud-black;
   }

@@ -140,11 +140,21 @@ add_action( 'widgets_init', 'cheeditha_energy_widgets_init' );
 /**
  * Enqueue scripts and styles.
  */
+
 function cheeditha_energy_scripts() {
+	
+	
+	wp_deregister_script('jquery');
+	wp_register_script('jquery', '//cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js', false, null);
+	wp_enqueue_script('jquery');
+	
 	wp_enqueue_style( 'cheeditha-energy-style', get_stylesheet_uri(), array(), _S_VERSION );
 	wp_style_add_data( 'cheeditha-energy-style', 'rtl', 'replace' );
 
 	wp_enqueue_script( 'cheeditha-energy-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
+
+	wp_enqueue_script( 'cheeditha-energy-functions', get_template_directory_uri() . '/js/functions.js', array('jquery'), _S_VERSION, true );
+
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );

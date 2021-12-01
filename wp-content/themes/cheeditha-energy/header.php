@@ -29,7 +29,7 @@
 		<div class="header-wrapper">
 			<div class="site-logo">
 				<a href="<?php echo get_home_url(); ?>" class="header-logo">
-              		<img class="logo" src="<?php echo get_template_directory_uri(); ?>/media/images/logo-cheeditha.svg" alt="<?php bloginfo( 'name' ); ?>" />
+              		<img class="logo" src="wp-content/themes/cheeditha-energy/Media/Images/logo-cheeditha.svg" alt="<?php bloginfo( 'name' ); ?>" />
             	</a>
 			</div>
 		<div class="vertical-line"></div>
