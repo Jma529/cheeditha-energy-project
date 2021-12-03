@@ -1010,15 +1010,18 @@ table {
 }
 
 .slide-in {
-  display: none;
-}
-.slide-in.active {
-  display: flex;
   width: 50vw;
   height: 100vh;
-  position: absolute;
+  position: fixed;
+  visibility: hidden;
   top: 0;
+  right: -50%;
+  opacity: 1;
+}
+.slide-in.active {
+  visibility: visible;
   right: 0;
+  transition-duration: 1s;
 }
 .slide-in.black {
   background: #000000;

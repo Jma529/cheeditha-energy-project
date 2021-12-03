@@ -18,7 +18,7 @@ get_header(); ?>
 </div>
 
 <!-- Our story -->
-<section class="slide-in black" id="our-story">
+<section class="slide-in black">
   <div class="wrapper">
     <div class="content">
       <h1>Our mission</h1>

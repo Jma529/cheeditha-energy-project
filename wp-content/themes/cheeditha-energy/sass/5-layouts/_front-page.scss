@@ -17,15 +17,20 @@
 }
 
 .slide-in {
-  display: none;
-&.active {
-  display: flex;
   width: 50vw;
   height: 100vh;
-  position: absolute;
+  position: fixed;
+  visibility: hidden;
   top: 0;
+  right: -50%;
+  opacity: 1;
+
+&.active {
+  visibility: visible;
   right: 0;
+  transition-duration: 1s;  
 }
+
   &.black {
     background: $color__backgroud-black;
   }
