@@ -1,50 +1,3 @@
-
-.page-header {
-	position: relative;
-	background-color: $color__background-body;
-	background-position: center center;
-	background-size: cover;
-	background-repeat: no-repeat;
-	color: black;
-  
-	.overlay {
-	  opacity: 0.7;
-	}
-  
-	.hero-content {
-	  position: relative;
-	  display: flex;
-	  flex-direction: column;
-	  justify-content: center;
-	  min-height: 500px;
-	  padding: 80px 0;
-  
-	  @include breakpoint(md) {
-		padding: 120px 0;
-	  }
-	}
-  
-	.entry-title {
-	  display: block;
-	  margin: 0;
-	}
-  
-	.entry-sub-title {
-	  display: block;
-	}
-  
-	.actions {
-	  display: inline-flex;
-	  width: 100%;
-	}
-  }
-  
-  .has-sub-nav {
-  
-	.page-header {
-	  padding-top: 50px;
-	}
-  }
 .header {
 	width: 50vw;
 
@@ -52,8 +5,8 @@
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		justify-content: center;
 		height: 100vh;
+		padding-top: 50px;
 	}
 }
   

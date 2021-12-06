@@ -188,4 +188,13 @@ require get_template_directory() . '/inc/customizer.php';
 if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
+/** Add ID to list items in nav */
+$menu_counter = 0;
+add_filter('nav_menu_item_id','change_nav_menu_id',10,2);
+
+function change_nav_menu_id($current_id,$item_details){
+global $menu_counter;
+return $item_details->post_name;
+}
+
 

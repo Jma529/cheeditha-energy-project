@@ -6,30 +6,19 @@
  *
  * @package cheeditha-energy
  */
+/* Template Name: Home */ 
 
 get_header(); ?>
 
 <main class="front-page">
 
-<div class="animation-wrap">
-  <video autoplay="true" muted="true" loop="true" preload="true">
-    <source src="wp-content/themes/cheeditha-energy/Media/cheeditha-animation.mp4" type="video/mp4">
-  </video>
-</div>
+<?php 
 
-<!-- Our story -->
-<section class="slide-in black">
-  <div class="wrapper">
-    <div class="content">
-      <h1>Our mission</h1>
-    </div>
+get_template_part('template-parts/front-page/hero');
+get_template_part('template-parts/front-page/about');
+get_template_part('template-parts/front-page/team');
 
-  </div>
-
-
-</section>
-
-
+?>
 
 
 

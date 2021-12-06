@@ -4,10 +4,16 @@ body {
 	background-repeat: no-repeat;
 	background-size: contain;
 	background-position: bottom;
+	max-height: 100vh;
+	overflow: hidden;
 
 	@include breakpoint(xxl) {
 		background-position-y: 115%;
 	}
 
+}
+
+section {
+	padding-top: 60px;
 }
 

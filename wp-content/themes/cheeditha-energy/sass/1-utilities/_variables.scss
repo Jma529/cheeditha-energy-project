@@ -32,7 +32,7 @@ $color__text-input-focus: #111;
 $color__link: #4169e1; //royalblue
 $color__link-visited: #800080; //purple
 $color__link-hover: #191970; //midnightblue
-$color__text-main: #404040;
+$color__text-main: #ffffff;
 
 $color__border-button: #ccc #ccc #bbb;
 $color__border-button-hover: #ccc #bbb #aaa;
@@ -62,3 +62,19 @@ $columns: (
 );
 
 $columns__margin: 3.8%;
+
+$container-width:           1300px;
+// $container-pad-desktop:     80px;
+// $container-pad-tablet:      50px;
+$container-pad:             20px;
+
+$gutters:                   10px;
+
+
+$content-line-break:        20px;
+$content-paragraph-break:   50px;
+
+$constrain-page:            1000px;
+$constrain-content:         750px;
+
+$border-thickness:          1px;

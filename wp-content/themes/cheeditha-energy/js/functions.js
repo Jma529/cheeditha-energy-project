@@ -1,9 +1,15 @@
 jQuery(document).ready(function(){
 
   // Slide in pages when nav item is clicked
-  $('.menu-item').click(function() {
-    $('.slide-in').toggleClass('active');
+  $('#our-story').click(function() {
+    $('#our-story-page').toggleClass('active');
+  });
+  $('#our-people').click(function() {
+    $('#our-people-page').toggleClass('active');
   });
 
+  $('.close').click(function() {
+    $('.slide-in').removeClass('active');
+  })
 
 });
