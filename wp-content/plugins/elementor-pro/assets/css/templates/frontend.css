@@ -5926,8 +5926,10 @@ body.rtl .elementor-widget-slides .elementor-swiper-button-prev {
   border-radius: 3px;
   background-color: rgba(0, 0, 0, 0.05);
   color: #494c4f; }
-  .elementor-menu-toggle.elementor-active i:before {
-    content: '\e87f'; }
+  .elementor-menu-toggle.elementor-active .elementor-menu-toggle__icon--open {
+    display: none; }
+  .elementor-menu-toggle:not(.elementor-active) .elementor-menu-toggle__icon--close {
+    display: none; }
   .elementor-menu-toggle .e-font-icon-svg {
     fill: #494c4f;
     height: 1em;

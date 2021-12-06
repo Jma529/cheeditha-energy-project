@@ -1,5 +1,11 @@
 # Elementor Pro - by Elementor.com
 
+#### 3.5.2 - 2021-11-28
+* Tweak: Adjusted license mechanism to support trial period
+* Fix: Updates made to Global Widgets do not reflect accordingly to linked widgets ([#16815](https://github.com/elementor/elementor/issues/16815))
+* Fix: Hamburger toggle button doesn't change to “close” when menu is collapsed in Nav Menu widget when Inline Font Awesome experiment is active
+* Fix: Global Widget cannot be unlinked
+
 #### 3.5.1 - 2021-11-10
 * Fix: Inline HTML elements appear as plain text in Animated Headline widget ([#16816](https://github.com/elementor/elementor/issues/16816))
 * Fix: Dropdown items inherited values from Main Menu space between control in Nav Menu widget ([#16815]((https://github.com/elementor/elementor/issues/16815))

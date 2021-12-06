@@ -5,6 +5,8 @@ use Elementor\Core\Admin\Admin_Notices;
 use Elementor\Settings;
 use Elementor\Utils;
 use ElementorPro\Core\Connect\Apps\Activate;
+use ElementorPro\License\Notices\Trial_Expired_Notice;
+use ElementorPro\License\Notices\Trial_Period_Notice;
 use ElementorPro\Plugin;
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -347,6 +349,11 @@ class Admin {
 			return;
 		}
 
+		// When the license with pro trial, the messages here are not relevant, pro trial messages will be shown instead.
+		if ( API::is_licence_pro_trial() ) {
+			return;
+		}
+
 		$errors = self::get_errors_details();
 
 		if ( isset( $errors[ $license_data['license'] ] ) ) {
@@ -657,6 +664,13 @@ class Admin {
 		add_action( 'admin_post_elementor_pro_deactivate_license', [ $this, 'action_deactivate_license' ] );
 
 		add_action( 'admin_notices', [ $this, 'admin_license_details' ], 20 );
+
+		add_filter( 'elementor/core/admin/notices', function( $notices ) {
+			$notices[] = new Trial_Period_Notice();
+			$notices[] = new Trial_Expired_Notice();
+
+			return $notices;
+		} );
 
 		add_action( 'deactivate_plugin', [ $this, 'on_deactivate_plugin' ] );
 

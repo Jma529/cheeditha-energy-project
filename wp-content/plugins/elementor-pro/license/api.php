@@ -21,6 +21,9 @@ class API {
 	const STATUS_SITE_INACTIVE = 'site_inactive';
 	const STATUS_DISABLED = 'disabled';
 
+	// Features
+	const FEATURE_PRO_TRIAL = 'pro_trial';
+
 	// Requests lock config.
 	const REQUEST_LOCK_TTL = MINUTE_IN_SECONDS;
 	const REQUEST_LOCK_OPTION_NAME = '_elementor_pro_api_requests_lock';
@@ -349,6 +352,22 @@ class API {
 		$license_data = self::get_license_data();
 
 		return self::STATUS_VALID === $license_data['license'];
+	}
+
+	public static function is_license_expired() {
+		$license_data = self::get_license_data();
+
+		return self::STATUS_EXPIRED === $license_data['license'];
+	}
+
+	public static function is_licence_pro_trial() {
+		return self::is_licence_has_feature( self::FEATURE_PRO_TRIAL );
+	}
+
+	public static function is_licence_has_feature( $feature_name ) {
+		$license_data = self::get_license_data();
+
+		return in_array( $feature_name, $license_data['features'], true );
 	}
 
 	public static function is_license_about_to_expire() {
