@@ -7,6 +7,9 @@ jQuery(document).ready(function(){
   $('#our-people').click(function() {
     $('#our-people-page').toggleClass('active');
   });
+  $('#portfolio').click(function() {
+    $('#portfolio-page').toggleClass('active');
+  });
 
   $('.close').click(function() {
     $('.slide-in').removeClass('active');

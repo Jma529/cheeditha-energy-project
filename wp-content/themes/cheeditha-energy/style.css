@@ -1016,7 +1016,7 @@ table {
   width: 50vw;
 }
 
-#our-story-page, #our-people-page {
+#our-story-page, #our-people-page, #portfolio-page {
   display: flex;
   width: 50%;
   height: 100vh;
@@ -1031,13 +1031,13 @@ table {
   transition-timing-function: cubic-bezier(0.55, 0, 0.1, 1);
   transition-delay: 0s;
 }
-#our-story-page.active, #our-people-page.active {
+#our-story-page.active, #our-people-page.active, #portfolio-page.active {
   transform: translateX(0%);
 }
-#our-story-page.black, #our-people-page.black {
+#our-story-page.black, #our-people-page.black, #portfolio-page.black {
   background: #000000;
 }
-#our-story-page .wrapper, #our-people-page .wrapper {
+#our-story-page .wrapper, #our-people-page .wrapper, #portfolio-page .wrapper {
   display: flex;
   justify-content: center;
   width: 100%;
@@ -1078,6 +1078,11 @@ table {
 }
 .highlights .highlight h2 {
   margin: 0;
+}
+
+.profile-image {
+  width: 500px;
+  height: 500px;
 }
 
 /*--------------------------------------------------------------

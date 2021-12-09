@@ -12,7 +12,7 @@
 }
 // General 
 
-#our-story-page, #our-people-page {
+#our-story-page, #our-people-page, #portfolio-page {
   display: flex;
   width: 50%;
   height: 100vh;
@@ -81,4 +81,11 @@
       margin: 0;
     }
   }
+}
+
+// Team section
+
+.profile-image {
+  width: 500px;
+  height: 500px;
 }

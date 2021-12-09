@@ -1,11 +1,11 @@
 <?php
 
 /* Variables */
-$title = get_field('our_people_title');
+$title = get_field('portfolio_title');
 
 /* Post query */
   $args = array(
-    'post_type'         => 'Team',
+    'post_type'         => 'Projects',
     'orderby'           => 'menu_order',
     'order'             => 'ASC',
     'posts_per_page'    => -1
@@ -15,8 +15,8 @@ $title = get_field('our_people_title');
 
 
 <?php if( $team -> have_posts() ): ?>
-
-<section class="slide-in black" id="our-people-page">
+<h1>Hello</h1>
+<section class="slide-in black" id="portfolio-page">
   <div class="wrapper">
     <div class="close">Close</div>
     <div class="content flex">
@@ -25,15 +25,15 @@ $title = get_field('our_people_title');
       <?php while( $team -> have_posts() ) : $team -> the_post(); 
       
         $image = get_the_post_thumbnail_url( get_the_ID(), 'full' );
-        $position = get_field('team_member_position');
-        $description = get_field('team_member_bio');
+        $title = get_field('project_title');
+        $description = get_field('project_desc');
         ?>
 
     <article>
       <div class="profile-image" style="background-image: url('<?php echo $image ?>');"></div>
       <div class="profile-content">
         <h3 class="name"><?php the_title(); ?></h3>
-        <span class="position"><?php echo $position ?></span>
+        <span class="position"><?php echo $title ?></span>
         <p class="description"><?php echo $description ?></p>
       </div>
     </article>

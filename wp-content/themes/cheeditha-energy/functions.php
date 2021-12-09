@@ -172,6 +172,9 @@ require get_template_directory() . '/inc/custom-header.php';
  */
 require get_template_directory() . '/inc/template-tags.php';
 
+/** Register custom post types */
+require get_template_directory() . '/cpt/cpt-team.php';
+require get_template_directory() . '/cpt/cpt-projects.php';
 /**
  * Functions which enhance the theme by hooking into WordPress.
  */
@@ -196,5 +199,4 @@ function change_nav_menu_id($current_id,$item_details){
 global $menu_counter;
 return $item_details->post_name;
 }
-
 
