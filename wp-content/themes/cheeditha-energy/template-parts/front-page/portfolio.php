@@ -29,7 +29,7 @@ $title = get_field('portfolio_title');
         ?>
 
     <article class="gallery project">
-      <div class="profile-image" style="background-image: url('<?php echo $image ?>');"></div>
+      <img class="profile-image" src="<?php echo $image ?>');"/>
         <div class="gallery-overlay">
           <h3 class="name"><?php the_title(); ?></h3>
           <span class="position"><?php echo $title ?></span>

@@ -29,14 +29,26 @@
 
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
+<?php 
+// Variables 
+
+$animation = get_field('animation');
+?>
+
+
 <div id="page" class="site flex">
 	<div class="bg-topo"></div>
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'cheeditha-energy' ); ?></a>
 	<div class="site-logo mobile">
 				<a href="<?php echo get_home_url(); ?>" class="header-logo">
-              		<img class="logo" src="<?php echo get_template_directory_uri(); ?>/media/images/logo-cheeditha.svg" alt="<?php bloginfo( 'name' ); ?>" />
-            	</a>
-			</div>
+					<img class="logo" src="<?php echo get_template_directory_uri(); ?>/media/images/logo-cheeditha.svg" alt="<?php bloginfo( 'name' ); ?>" />
+				</a>
+	</div>
+	<div class="animation-wrap">
+  <video autoplay="true" muted="true" loop="true" preload="true">
+    <source src="<?php echo $animation; ?>" type="video/mp4">
+  </video>
+</div>
 	<header id="masthead" class="header">
 		<div class="header-wrapper">
 			<div class="site-logo desktop">

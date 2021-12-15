@@ -1,9 +1,10 @@
 .header {
+	position: fixed;
 	width: 50vw;
 
 	@include breakpoint(sm){
+		position: static;
 		width: 100%;
-		order: 3;
 	}
 	.header-wrapper {
 		display: flex;
@@ -12,8 +13,13 @@
 		height: 100vh;
 		padding-top: 50px;
 
-		@include breakpoint(lg) {
-			padding-top: 0;
+		@include breakpoint(sm) {
+			padding-top: 20px;
+		}
+
+		@include breakpoint(sm){
+			position: static;
+			height: auto;
 		}
 
 		.contact {
@@ -166,7 +172,6 @@
 			display: flex;
 			justify-content: center;
 			margin: 16px 0;
-			order: 1;
 		}
 		}
 
@@ -183,11 +188,6 @@
 
 		@include breakpoint(sm) {
 			width: 200px;
-		}
-	
-		@include breakpoint(xs) {
-		  width: 154px;
-		  height: 44px;
 		}
 	  }
   }

@@ -31,7 +31,7 @@ $title = get_field('our_people_title');
 
     <article>
       <div class="gallery profile">
-        <div class="profile-image" style="background-image: url('<?php echo $image ?>');"></div>
+      <img class="profile-image" src="<?php echo $image ?>')"/>
         <div class="gallery-overlay">
           <p class="description"><?php echo $description ?></p>
         </div>
