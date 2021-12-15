@@ -20,8 +20,6 @@ get_template_part('template-parts/front-page/about');
 
 get_template_part('template-parts/front-page/team');
 
-get_template_part('template-parts/front-page/team');
-
 get_template_part('template-parts/front-page/portfolio');
 
 ?>

@@ -9,6 +9,13 @@
  * @package Cheeditha-energy
  */
 
+ // Variables 
+ $email = get_field('email');
+ $phone = get_field('phone');
+ $linkedin = get_field('linkedin');
+ $instagram = get_field('instagram');
+ $address = get_field('address');
+
 ?>
 <!doctype html>
 <html <?php language_attributes(); ?>>
@@ -23,18 +30,22 @@
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
 <div id="page" class="site flex">
+	<div class="bg-topo"></div>
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'cheeditha-energy' ); ?></a>
-
+	<div class="site-logo mobile">
+				<a href="<?php echo get_home_url(); ?>" class="header-logo">
+              		<img class="logo" src="<?php echo get_template_directory_uri(); ?>/media/images/logo-cheeditha.svg" alt="<?php bloginfo( 'name' ); ?>" />
+            	</a>
+			</div>
 	<header id="masthead" class="header">
 		<div class="header-wrapper">
-			<div class="site-logo">
+			<div class="site-logo desktop">
 				<a href="<?php echo get_home_url(); ?>" class="header-logo">
-              		<img class="logo" src="wp-content/themes/cheeditha-energy/Media/Images/logo-cheeditha.svg" alt="<?php bloginfo( 'name' ); ?>" />
+              		<img class="logo" src="<?php echo get_template_directory_uri(); ?>/media/images/logo-cheeditha.svg" alt="<?php bloginfo( 'name' ); ?>" />
             	</a>
 			</div>
 		<div class="vertical-line"></div>
 		<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'cheeditha-energy' ); ?></button>
 			<div class="menu-items">
 				<div class="menu-top">
 				<?php
@@ -67,5 +78,24 @@
 			</div>
 
 		</nav><!-- #site-navigation -->
+		<div class="vertical-line"></div>
+		<div class="contact">
+			<div class="social-icons">
+				<img src="<?php echo get_template_directory_uri(); ?>/media/images/icon-linkedin.svg"/>
+				<img src="<?php echo get_template_directory_uri(); ?>/media/images/icon-instagram.svg"/>
+			</div>
+			<div class="contact-info">
+				<p><?php echo $address ?></p>
+				<p>
+					<a href="mailto:<?php echo $email?>"><?php echo $email ?></a>
+				</p>
+				<p>
+					<a href="tel:<?php echo $phone?>"><?php echo $phone ?></a>
+				</p>
+			</div>
+	
+
+		</div>
 	   </div>
+
 	</header><!-- #masthead -->

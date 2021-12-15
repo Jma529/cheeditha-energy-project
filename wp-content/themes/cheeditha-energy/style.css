@@ -437,21 +437,17 @@ body.login .g-recaptcha-wrap {
 --------------------------------------------------------------*/
 body {
   background: #fff;
-  background-image: url("Media/Images/bg-topo.png");
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: bottom;
-  max-height: 100vh;
   overflow: hidden;
+  width: 100%;
+  height: 100vh;
 }
-@media only screen and (min-width: 1601px) {
-  body {
-    background-position-y: 115%;
-  }
-}
-
-section {
+body section {
   padding-top: 60px;
+}
+@media only screen and (max-width: 768px) {
+  body .site {
+    flex-direction: column;
+  }
 }
 
 h1, .h1 {
@@ -658,12 +654,33 @@ input[type=submit]:focus {
 .header {
   width: 50vw;
 }
+@media only screen and (max-width: 768px) {
+  .header {
+    width: 100%;
+    order: 3;
+  }
+}
 .header .header-wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
   height: 100vh;
   padding-top: 50px;
+}
+@media only screen and (max-width: 1200px) {
+  .header .header-wrapper {
+    padding-top: 0;
+  }
+}
+.header .header-wrapper .contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #000000;
+  text-align: center;
+}
+.header .header-wrapper .contact-info p {
+  margin-bottom: 5px;
 }
 
 .main-navigation {
@@ -707,12 +724,14 @@ input[type=submit]:focus {
 .main-navigation li {
   position: relative;
 }
+.main-navigation li:hover > a, .main-navigation li.focus > a {
+  text-decoration: underline;
+}
 .main-navigation a {
   display: block;
   text-decoration: none;
-  font-size: 18px;
-  margin: 15px 0;
 }
+
 /* Small menu. */
 .menu-toggle,
 .main-navigation.toggled ul {
@@ -752,26 +771,42 @@ input[type=submit]:focus {
 
 .vertical-line {
   width: 1px;
-  height: 50px;
-  background-color: black;
+  height: 30px;
+  background-color: #821C3E;
   margin-bottom: 10px;
 }
 
-.header .site-logo {
+.site-logo {
   margin: 12px 0;
   border-radius: 100px;
 }
+.site-logo.mobile {
+  display: none;
+}
 @media only screen and (max-width: 768px) {
-  .header .site-logo {
+  .site-logo.mobile {
+    display: flex;
+    justify-content: center;
     margin: 16px 0;
+    order: 1;
   }
 }
-.header .site-logo .logo {
+@media only screen and (max-width: 768px) {
+  .site-logo.desktop {
+    display: none;
+  }
+}
+.site-logo .logo {
   display: block;
   width: 300px;
 }
+@media only screen and (max-width: 768px) {
+  .site-logo .logo {
+    width: 200px;
+  }
+}
 @media only screen and (max-width: 576px) {
-  .header .site-logo .logo {
+  .site-logo .logo {
     width: 154px;
     height: 44px;
   }
@@ -833,13 +868,13 @@ textarea {
 }
 
 a {
-  color: #4169e1;
+  color: #000000;
 }
 a:visited {
-  color: #800080;
+  color: #000000;
 }
 a:hover, a:focus, a:active {
-  color: #191970;
+  color: #821C3E;
 }
 a:focus {
   outline: thin dotted;
@@ -984,11 +1019,6 @@ table {
   display: block;
 }
 
-.post,
-.page {
-  margin: 0 0 1.5em;
-}
-
 .updated:not(.published) {
   display: none;
 }
@@ -1004,16 +1034,59 @@ table {
   margin: 0 0 1.5em;
 }
 
+.bg-topo {
+  background-image: url("media/images/bg-topo.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: bottom;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  bottom: -15%;
+}
+@media only screen and (max-width: 992px) {
+  .bg-topo {
+    bottom: -10%;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .bg-topo {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .front-page {
+    display: flex;
+    align-items: center;
+    order: 2;
+  }
+}
+
 .animation-wrap {
   position: relative;
   width: 50%;
   height: 100%;
+}
+@media only screen and (max-width: 768px) {
+  .animation-wrap {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    height: 200px;
+  }
 }
 .animation-wrap video {
   height: 75%;
   position: absolute;
   bottom: 25%;
   width: 50vw;
+}
+@media only screen and (max-width: 768px) {
+  .animation-wrap video {
+    height: 100%;
+    bottom: 5%;
+  }
 }
 
 #our-story-page, #our-people-page, #portfolio-page {
@@ -1030,6 +1103,11 @@ table {
   transition-duration: 1s;
   transition-timing-function: cubic-bezier(0.55, 0, 0.1, 1);
   transition-delay: 0s;
+}
+@media only screen and (max-width: 768px) {
+  #our-story-page, #our-people-page, #portfolio-page {
+    width: 100%;
+  }
 }
 #our-story-page.active, #our-people-page.active, #portfolio-page.active {
   transform: translateX(0%);
@@ -1080,9 +1158,62 @@ table {
   margin: 0;
 }
 
-.profile-image {
-  width: 500px;
+.gallery {
+  position: relative;
   height: 500px;
+  width: 500px;
+}
+.gallery:hover .gallery-overlay {
+  opacity: 70%;
+}
+.gallery .gallery-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+
+.page-template-coming-soon {
+  height: 100vh;
+}
+.page-template-coming-soon .header {
+  display: none;
+}
+.page-template-coming-soon .coming-soon {
+  width: 100%;
+  height: 100vh;
+}
+.page-template-coming-soon .coming-soon .wrapper {
+  height: 100%;
+  width: 100%;
+}
+.page-template-coming-soon .coming-soon .wrapper .flex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 100%;
+}
+.page-template-coming-soon .coming-soon .wrapper .title {
+  color: #000000;
+}
+.page-template-coming-soon .coming-soon .site-logo {
+  width: 360px;
+}
+.page-template-coming-soon .coming-soon .animation-wrap {
+  height: 500px;
+  width: 500px;
+}
+.page-template-coming-soon .coming-soon .animation-wrap video {
+  width: 100%;
+  bottom: 30%;
 }
 
 /*--------------------------------------------------------------

@@ -30,11 +30,15 @@ $title = get_field('our_people_title');
         ?>
 
     <article>
-      <div class="profile-image" style="background-image: url('<?php echo $image ?>');"></div>
+      <div class="gallery profile">
+        <div class="profile-image" style="background-image: url('<?php echo $image ?>');"></div>
+        <div class="gallery-overlay">
+          <p class="description"><?php echo $description ?></p>
+        </div>
+      </div>
       <div class="profile-content">
-        <h3 class="name"><?php the_title(); ?></h3>
+      <h3 class="name"><?php the_title(); ?></h3>
         <span class="position"><?php echo $position ?></span>
-        <p class="description"><?php echo $description ?></p>
       </div>
     </article>
 

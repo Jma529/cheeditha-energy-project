@@ -1,12 +1,33 @@
 .header {
 	width: 50vw;
 
+	@include breakpoint(sm){
+		width: 100%;
+		order: 3;
+	}
 	.header-wrapper {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		height: 100vh;
 		padding-top: 50px;
+
+		@include breakpoint(lg) {
+			padding-top: 0;
+		}
+
+		.contact {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			color: $color__text-black;
+			text-align: center;
+		}
+		.contact-info {
+			p {
+				margin-bottom: 5px;
+			}
+		}
 	}
 }
   
@@ -72,20 +93,13 @@
 
 		&:hover > a,
 		&.focus > a {
+			text-decoration: underline;
 		}
 	}
 
 	a {
 		display: block;
 		text-decoration: none;
-		font-size: 18px;
-		margin: 15px 0;
-	}
-
-	.current_page_item > a,
-	.current-menu-item > a,
-	.current_page_ancestor > a,
-	.current-menu-ancestor > a {
 	}
 }
 
@@ -128,34 +142,54 @@
 }
 .vertical-line {
 		width: 1px;
-		height: 50px;
-		background-color: black;
+		height: 30px;
+		background-color: $color__text-accent;
 		margin-bottom: 10px;
 	}
+
+	//=============================================================================================================
+// Contact Info
+//=============================================================================================================
+
 //=============================================================================================================
 // Logo
 //=============================================================================================================
 
-.header {
-
 	.site-logo {
 	  margin: 12px 0;
 	  border-radius: 100px;
+
+		&.mobile {
+			display: none;
+
+		@include breakpoint(sm) {
+			display: flex;
+			justify-content: center;
+			margin: 16px 0;
+			order: 1;
+		}
+		}
+
+		&.desktop {
+			@include breakpoint(sm) {
+				display: none;
+			}
+		}
   
-	  @include breakpoint(sm) {
-		margin: 16px 0;
-		  }
   
 	  .logo {
 		display: block;
 		width: 300px;
+
+		@include breakpoint(sm) {
+			width: 200px;
+		}
 	
 		@include breakpoint(xs) {
 		  width: 154px;
 		  height: 44px;
 		}
 	  }
-	}
   }
   
   

@@ -1,19 +1,18 @@
 body {
 	background: $color__background-body; // Fallback for when there is no custom background color defined.
-	background-image: url("Media/Images/bg-topo.png");
-	background-repeat: no-repeat;
-	background-size: contain;
-	background-position: bottom;
-	max-height: 100vh;
 	overflow: hidden;
+	width: 100%;
+	height: 100vh;
 
-	@include breakpoint(xxl) {
-		background-position-y: 115%;
-	}
-
-}
 
 section {
 	padding-top: 60px;
 }
 
+.site {
+	@include breakpoint(sm) {
+		flex-direction: column;
+	}
+}
+
+}
