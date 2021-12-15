@@ -10,7 +10,7 @@ $image = get_field('our_story_image');
 ?>
 
 
-<section class="slide-in black" id="our-story-page">
+<section class="slide-in black" id="our-story">
   <div class="wrapper">
     <div class="close">Close</div>
     <div class="content flex">

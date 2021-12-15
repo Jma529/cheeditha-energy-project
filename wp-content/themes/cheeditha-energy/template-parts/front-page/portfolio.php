@@ -15,7 +15,7 @@ $title = get_field('portfolio_title');
 
 <?php if( $projects -> have_posts() ): ?>
 
-<section class="slide-in black" id="portfolio-page">
+<section class="slide-in black" id="portfolio">
   <div class="wrapper">
     <div class="close">Close</div>
     <div class="content flex">

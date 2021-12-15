@@ -1077,7 +1077,7 @@ table {
   }
 }
 
-#our-story-page, #our-people-page, #portfolio-page {
+#our-story, #our-people, #portfolio, #partners {
   width: 50vw;
   height: 100vh;
   position: fixed;
@@ -1093,17 +1093,17 @@ table {
   overflow: auto;
 }
 @media only screen and (max-width: 768px) {
-  #our-story-page, #our-people-page, #portfolio-page {
+  #our-story, #our-people, #portfolio, #partners {
     width: 100%;
   }
 }
-#our-story-page.active, #our-people-page.active, #portfolio-page.active {
+#our-story.active, #our-people.active, #portfolio.active, #partners.active {
   transform: translateX(0%);
 }
-#our-story-page.black, #our-people-page.black, #portfolio-page.black {
+#our-story.black, #our-people.black, #portfolio.black, #partners.black {
   background: #000000;
 }
-#our-story-page .wrapper, #our-people-page .wrapper, #portfolio-page .wrapper {
+#our-story .wrapper, #our-people .wrapper, #portfolio .wrapper, #partners .wrapper {
   display: flex;
   justify-content: center;
   padding: 50px;

@@ -175,6 +175,7 @@ require get_template_directory() . '/inc/template-tags.php';
 /** Register custom post types */
 require get_template_directory() . '/cpt/cpt-team.php';
 require get_template_directory() . '/cpt/cpt-projects.php';
+require get_template_directory() . '/cpt/cpt-partners.php';
 /**
  * Functions which enhance the theme by hooking into WordPress.
  */
@@ -192,11 +193,16 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 /** Add ID to list items in nav */
-$menu_counter = 0;
-add_filter('nav_menu_item_id','change_nav_menu_id',10,2);
+// $menu_counter = 0;
+// add_filter('nav_menu_item_id','change_nav_menu_id',10,2);
 
-function change_nav_menu_id($current_id,$item_details){
-global $menu_counter;
-return $item_details->post_name;
+// function change_nav_menu_id($current_id,$item_details){
+// global $menu_counter;
+// return $item_details->post_name;
+// }
+
+add_filter( 'nav_menu_link_attributes', 'add_data_atts_to_nav', 10, 4 );
+    function add_data_atts_to_nav( $atts, $item, $args ) {
+    $atts['data-page'] = strtolower(str_replace("#","",$item->url));
+    return $atts;
 }
-

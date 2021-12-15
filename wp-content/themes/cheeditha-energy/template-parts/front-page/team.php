@@ -16,7 +16,7 @@ $title = get_field('our_people_title');
 
 <?php if( $team -> have_posts() ): ?>
 
-<section class="slide-in black" id="our-people-page">
+<section class="slide-in black" id="our-people">
   <div class="wrapper">
     <div class="close">Close</div>
     <div class="content flex">
