@@ -15,6 +15,8 @@
  $linkedin = get_field('linkedin');
  $instagram = get_field('instagram');
  $address = get_field('address');
+ $animation = get_field('animation');
+ $webm_animation = get_field('webm_animation');
 
 ?>
 <!doctype html>
@@ -29,13 +31,6 @@
 
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
-<?php 
-// Variables 
-
-$animation = get_field('animation');
-?>
-
-
 <div id="page" class="site flex">
 	<div class="bg-topo"></div>
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'cheeditha-energy' ); ?></a>
@@ -47,6 +42,7 @@ $animation = get_field('animation');
 	<div class="animation-wrap">
   <video playsinline autoplay muted loop>
     <source src="<?php echo $animation; ?>" type="video/mp4">
+		<source src="<?php echo $webm_animation; ?>" type="video/webm">
   </video>
 </div>
 	<header id="masthead" class="header">
