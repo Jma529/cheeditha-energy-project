@@ -45,7 +45,7 @@ $animation = get_field('animation');
 				</a>
 	</div>
 	<div class="animation-wrap">
-  <video autoplay="true" muted="true" loop="true" preload="true">
+  <video playsinline autoplay muted loop>
     <source src="<?php echo $animation; ?>" type="video/mp4">
   </video>
 </div>

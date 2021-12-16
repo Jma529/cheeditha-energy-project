@@ -437,7 +437,6 @@ body.login .g-recaptcha-wrap {
 --------------------------------------------------------------*/
 body {
   background: #fff;
-  overflow: hidden;
   width: 100%;
 }
 body section {
