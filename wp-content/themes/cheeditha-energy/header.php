@@ -44,7 +44,7 @@
     <source src="<?php echo $animation; ?>" type="video/mp4">
 		<source src="<?php echo $webm_animation; ?>" type="video/webm">
   </video>
-</div>
+	</div>
 	<header id="masthead" class="header">
 		<div class="header-wrapper">
 			<div class="site-logo desktop">

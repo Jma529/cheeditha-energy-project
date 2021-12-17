@@ -49,7 +49,7 @@
 // General 
 
 
-#our-story, #our-people, #portfolio, #partners {
+#our-story, #our-people, #portfolio, #partners, #contact {
   width: 50vw;
   height: 100vh;
   position: fixed;
@@ -85,6 +85,7 @@
 .content {
   flex-direction: column;
   text-align: center;
+  width: 100%;
 
   p {
     text-align: center;
@@ -163,4 +164,10 @@ transition: all .5s ease;
 
 }
 
+}
+
+.nf-form-content input[type=button] {
+  background: $color__text-accent !important;
+  color: white !important;
+  width: 100% !important;
 }

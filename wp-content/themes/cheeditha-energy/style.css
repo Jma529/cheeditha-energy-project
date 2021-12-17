@@ -1076,7 +1076,7 @@ table {
   }
 }
 
-#our-story, #our-people, #portfolio, #partners {
+#our-story, #our-people, #portfolio, #partners, #contact {
   width: 50vw;
   height: 100vh;
   position: fixed;
@@ -1092,17 +1092,17 @@ table {
   overflow: auto;
 }
 @media only screen and (max-width: 768px) {
-  #our-story, #our-people, #portfolio, #partners {
+  #our-story, #our-people, #portfolio, #partners, #contact {
     width: 100%;
   }
 }
-#our-story.active, #our-people.active, #portfolio.active, #partners.active {
+#our-story.active, #our-people.active, #portfolio.active, #partners.active, #contact.active {
   transform: translateX(0%);
 }
-#our-story.black, #our-people.black, #portfolio.black, #partners.black {
+#our-story.black, #our-people.black, #portfolio.black, #partners.black, #contact.black {
   background: #000000;
 }
-#our-story .wrapper, #our-people .wrapper, #portfolio .wrapper, #partners .wrapper {
+#our-story .wrapper, #our-people .wrapper, #portfolio .wrapper, #partners .wrapper, #contact .wrapper {
   display: flex;
   justify-content: center;
   padding: 50px;
@@ -1111,6 +1111,7 @@ table {
 .content {
   flex-direction: column;
   text-align: center;
+  width: 100%;
 }
 .content p {
   text-align: center;
@@ -1176,8 +1177,38 @@ table {
   transition: all 0.5s ease;
 }
 
+.nf-form-content input[type=button] {
+  background: #821C3E !important;
+  color: white !important;
+  width: 100% !important;
+}
+
 .page-template-coming-soon {
   height: 100vh;
+}
+.page-template-coming-soon .bg-topo {
+  bottom: -13%;
+}
+@media only screen and (max-width: 992px) {
+  .page-template-coming-soon .bg-topo {
+    bottom: 0;
+  }
+}
+.page-template-coming-soon .site-logo.mobile {
+  display: none;
+}
+.page-template-coming-soon .animation-wrap {
+  display: none;
+}
+.page-template-coming-soon .animation-wrap.coming-soon {
+  display: block;
+  height: 500px;
+  width: 500px;
+}
+.page-template-coming-soon .animation-wrap.coming-soon video {
+  position: static;
+  width: 100%;
+  bottom: 30%;
 }
 .page-template-coming-soon .header {
   display: none;
@@ -1199,17 +1230,6 @@ table {
 }
 .page-template-coming-soon .coming-soon .wrapper .title {
   color: #000000;
-}
-.page-template-coming-soon .coming-soon .site-logo {
-  width: 360px;
-}
-.page-template-coming-soon .coming-soon .animation-wrap {
-  height: 500px;
-  width: 500px;
-}
-.page-template-coming-soon .coming-soon .animation-wrap video {
-  width: 100%;
-  bottom: 30%;
 }
 
 /*--------------------------------------------------------------

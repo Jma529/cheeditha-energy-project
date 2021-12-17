@@ -22,8 +22,8 @@ get_header(); ?>
         <img class="logo" src="<?php echo get_template_directory_uri(); ?>/media/images/logo-cheeditha.svg" alt="<?php bloginfo( 'name' ); ?>" />
       </a>
     </div>
-    <div class="animation-wrap">
-      <video autoplay="true" muted="true" loop="true" preload="true">
+    <div class="animation-wrap coming-soon">
+      <video playsinline autoplay muted loop>
         <source src="<?php echo get_template_directory_uri(); ?>/media/cheeditha-animation.mp4" type="video/mp4">
       </video>
     </div>

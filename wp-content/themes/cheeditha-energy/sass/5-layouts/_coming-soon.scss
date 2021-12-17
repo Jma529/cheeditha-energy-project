@@ -1,10 +1,39 @@
 .page-template-coming-soon {
-
   height: 100vh;
+
+  .bg-topo {
+    bottom: -13%;
+    
+    @include breakpoint(md){
+      bottom: 0;
+    }
+  }
+
+  .site-logo {
+  &.mobile {
+    display: none;
+  }
+  }
   
-  .header {
+  .animation-wrap{
+    display: none; 
+    
+    &.coming-soon {
+      display: block;
+      
+      height: 500px;
+      width: 500px;
+      video {
+        position: static;
+        width: 100%;
+        bottom: 30%;
+      }
+    }
+  }
+   .header {
       display: none;
     }
+
   .coming-soon {
     width: 100%;
     height: 100vh;
@@ -23,16 +52,5 @@
         color: $color__text-black;
       }
     }
-  .site-logo {
-    width: 360px;
-  }
-  .animation-wrap {
-    height: 500px;
-    width: 500px;
-    video {
-      width: 100%;
-      bottom: 30%;
-    }
-  }
   }
 }
