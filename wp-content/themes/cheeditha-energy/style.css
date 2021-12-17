@@ -1183,53 +1183,73 @@ table {
   width: 100% !important;
 }
 
-.page-template-coming-soon {
+.page-template-front-page {
   height: 100vh;
+  overflow: hidden;
 }
-.page-template-coming-soon .bg-topo {
+@media only screen and (max-width: 768px) {
+  .page-template-front-page {
+    overflow: auto;
+  }
+}
+.page-template-front-page .bg-topo {
   bottom: -13%;
 }
 @media only screen and (max-width: 992px) {
-  .page-template-coming-soon .bg-topo {
+  .page-template-front-page .bg-topo {
     bottom: 0;
   }
 }
-.page-template-coming-soon .site-logo.mobile {
+.page-template-front-page .site-logo {
+  width: 225px;
+}
+.page-template-front-page .site-logo.mobile {
   display: none;
 }
-.page-template-coming-soon .animation-wrap {
+.page-template-front-page .animation-wrap {
   display: none;
 }
-.page-template-coming-soon .animation-wrap.coming-soon {
+.page-template-front-page .animation-wrap.coming-soon {
   display: block;
-  height: 500px;
+  height: 400px;
   width: 500px;
 }
-.page-template-coming-soon .animation-wrap.coming-soon video {
+.page-template-front-page .animation-wrap.coming-soon video {
   position: static;
   width: 100%;
   bottom: 30%;
 }
-.page-template-coming-soon .header {
+.page-template-front-page .header {
   display: none;
 }
-.page-template-coming-soon .coming-soon {
+.page-template-front-page .coming-soon {
   width: 100%;
   height: 100vh;
 }
-.page-template-coming-soon .coming-soon .wrapper {
+.page-template-front-page .coming-soon .wrapper {
   height: 100%;
   width: 100%;
 }
-.page-template-coming-soon .coming-soon .wrapper .flex {
+.page-template-front-page .coming-soon .wrapper .flex {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: flex-start;
   height: 100%;
+  position: relative;
+  padding-top: 50px;
 }
-.page-template-coming-soon .coming-soon .wrapper .title {
+.page-template-front-page .coming-soon .wrapper .contact-info {
   color: #000000;
+  text-align: center;
+}
+.page-template-front-page .coming-soon .wrapper .contact-info h2 {
+  font-family: "Futura PT", Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+.page-template-front-page .coming-soon .wrapper .contact-info p {
+  margin: 0;
 }
 
 /*--------------------------------------------------------------
