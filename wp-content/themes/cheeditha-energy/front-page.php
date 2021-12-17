@@ -24,6 +24,8 @@ get_template_part('template-parts/front-page/portfolio');
 
 get_template_part('template-parts/front-page/partners');
 
+get_template_part('template-parts/front-page/contact');
+
 ?>
 
 </main>
