@@ -17,6 +17,7 @@ $title = get_field('our_people_title');
 <?php if( $team -> have_posts() ): ?>
 
 <section class="slide-in black" id="our-people">
+  <div class="relative">
   <div class="wrapper">
     <div class="close">Close</div>
     <div class="content flex">
@@ -46,6 +47,10 @@ $title = get_field('our_people_title');
       
     </div>
 
+  </div>
+  <div>
+  <img class="bg-accent pea" src="<?php echo get_template_directory_uri(); ?>/media/images/img-pea.png" alt="<?php bloginfo( 'name' ); ?>" />
+  </div>
   </div>
 </section>
 

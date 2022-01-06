@@ -16,6 +16,36 @@
   }
 
 }
+
+.relative {
+  position: relative;
+}
+
+.bg-accent {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  padding: 20px;
+
+  &.snake {
+    bottom: -30%;
+  }
+
+  &.pea {
+    bottom: -15%;
+  }
+
+  &.stingray {
+    bottom: -20%;
+
+    @include breakpoint(sm) {
+      bottom: -45%;
+    }
+  }
+
+
+
+}
 .front-page {
 
   @include breakpoint(sm){
@@ -49,7 +79,7 @@
 // General 
 
 
-#our-story, #our-people, #portfolio, #partners, #contact {
+#our-story, #our-people, #capabilities, #portfolio, #partners, #contact {
   width: 50vw;
   height: 100vh;
   position: fixed;
@@ -72,7 +102,7 @@
 }
 
   &.black {
-    background: $color__backgroud-black;
+    background-color: $color__backgroud-black;
   }
 
   .wrapper {
@@ -86,9 +116,20 @@
   flex-direction: column;
   text-align: center;
   width: 100%;
+  padding: 0 50px;
+
+  @include breakpoint(lg) {
+    padding: 0 20px;
+  }
 
   p {
     text-align: center;
+  }
+
+  h1 {
+    &.bottom-padding {
+      padding-bottom: 20px;
+    }
   }
 }
 
@@ -105,6 +146,33 @@
   z-index: 3; 
 }
 
+/* Arrow button */
+.button-arrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &.capability {
+    padding-bottom: 30px;
+  }
+
+  a {
+    color: $color__text-main;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: $color__link-hover;
+    }
+
+    .icon-arrow {
+      padding-left: 20px;
+      width: 50px;
+    }
+  }
+}
 // About section
 
 .highlights {
@@ -112,11 +180,20 @@
   flex-wrap: wrap;
   width: 100%;
 
+  @include breakpoint(xs){
+    flex-direction: column;
+    align-content: center;
+  }
+
   .highlight {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 50%;
+
+    @include breakpoint(xs){
+      width: 100%;
+    }
 
     h2 {
       margin: 0;
@@ -130,8 +207,10 @@
 // Image overlay
 .gallery {
   position: relative;
-  height: 500px;
-  margin-bottom: 24px;
+
+  &.project {
+    margin-bottom: 30px;
+  }
   
   &:hover
   .gallery-overlay {
@@ -139,8 +218,6 @@
   }
 
   .profile-image {
-    height: 500px;
-    width: 500px;
 
     @include breakpoint(sm){
       height: auto;
@@ -148,26 +225,38 @@
     }
   }
 
-.gallery-overlay {
-position: absolute;
-width: 100%;
-height: 100%;
-top: 0;
-display: flex;
-flex-direction: column;
-align-items: center;
-justify-content: center;
-background-color: black;
-opacity: 0;
-transition: all .5s ease;
 
-
+  .gallery-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+  opacity: 0;
+  transition: all .5s ease;
+  }
 }
 
+.profile-content {
+  margin-bottom: 30px; 
 }
+
+/* Contact us */
 
 .nf-form-content input[type=button] {
   background: $color__text-accent !important;
   color: white !important;
   width: 100% !important;
+}
+
+.nf-form-fields-required {
+  font-size: 12px;
+}
+
+.social-icon {
+  padding: 5px;
 }

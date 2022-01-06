@@ -12,7 +12,7 @@
 ?>
 
 	<footer id="colophon" class="site-footer">
-
+<span>©2022 Cheeditha Energy</span>
 	
 	</footer><!-- #colophon -->
 </div><!-- #page -->
