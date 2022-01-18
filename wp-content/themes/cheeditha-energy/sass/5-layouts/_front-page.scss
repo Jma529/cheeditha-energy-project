@@ -74,6 +74,10 @@
       position: static;
       height: 100%;
     }
+
+    @include breakpoint(ht) {
+      right: 10%;
+    }
   }
 }
 // General 
@@ -243,6 +247,42 @@
 
 .profile-content {
   margin-bottom: 30px; 
+}
+
+/* Partner section */
+
+.partner-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  .partner {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    padding: 20px;
+    border: 0.1px solid $color__border-abbr;
+    margin-bottom: 20px;
+
+
+    @include breakpoint(md) {
+      width: 48%;
+    }
+
+    @include breakpoint(xs) {
+      width: 100%;
+    }
+
+    a {
+      max-width: 100%;
+      height: auto;
+      flex-grow:1; 
+    }
+
+    p {
+      margin-top: 20px;
+    }
+  }
 }
 
 /* Contact us */

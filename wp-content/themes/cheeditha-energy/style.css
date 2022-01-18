@@ -1126,6 +1126,11 @@ table {
     height: 100%;
   }
 }
+@media only screen and (max-height: 815px) {
+  .animation-wrap video {
+    right: 10%;
+  }
+}
 
 #our-story, #our-people, #capabilities, #portfolio, #partners, #contact {
   width: 50vw;
@@ -1269,6 +1274,39 @@ table {
 
 .profile-content {
   margin-bottom: 30px;
+}
+
+/* Partner section */
+.partner-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.partner-grid .partner {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  padding: 20px;
+  border: 0.1px solid #666;
+  margin-bottom: 20px;
+}
+@media only screen and (max-width: 992px) {
+  .partner-grid .partner {
+    width: 48%;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .partner-grid .partner {
+    width: 100%;
+  }
+}
+.partner-grid .partner a {
+  max-width: 100%;
+  height: auto;
+  flex-grow: 1;
+}
+.partner-grid .partner p {
+  margin-top: 20px;
 }
 
 /* Contact us */
