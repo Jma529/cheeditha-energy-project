@@ -27,7 +27,7 @@
 	  @else if $min == xxl  { @media only screen and (min-width: 1601px) { @content; } }
   
 	  // Media query for screen height <= 800px
-	  @else if $min == ht   { @media only screen and (max-height: 800px) { @content; } }
+	  @else if $min == ht   { @media only screen and (max-height: 815px) { @content; } }
   
 	  @else {
 		@warn "Check your string - refer to breakpoint.sass";

@@ -681,12 +681,13 @@ input[type=submit]:focus {
 @media only screen and (max-width: 768px) {
   .header .header-wrapper {
     padding-top: 20px;
-  }
-}
-@media only screen and (max-width: 768px) {
-  .header .header-wrapper {
     position: static;
     height: auto;
+  }
+}
+@media only screen and (max-height: 815px) {
+  .header .header-wrapper {
+    padding-top: 0px;
   }
 }
 .header .header-wrapper .contact {
