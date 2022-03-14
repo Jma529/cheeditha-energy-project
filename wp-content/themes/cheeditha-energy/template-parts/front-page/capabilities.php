@@ -1,34 +1,47 @@
+<?php
+
+/* Variables */
+$title = get_field('page_title');
+
+/* Post query */
+  $args = array(
+    'post_type'         => 'capability',
+    'orderby'           => 'menu_order',
+    'order'             => 'ASC',
+    'posts_per_page'    => -1
+  );
+  $capabilities = new WP_Query($args);
+?>
+
+<?php if( $capabilities -> have_posts() ): ?>
+
 <section class="slide-in black" id="capabilities">
   <div class="wrapper">
     <div class="close">Close</div>
     <div class="content flex">
-      <h1 class="bottom-padding">Capabilities</h1>
-      <div class="capability-list">
-        <div class="button-arrow capability">
-          <a href="#">Capability Statement
-          <svg class="icon-arrow" width="44" viewBox="0 0 44 18" xmlns="http://www.w3.org/2000/svg">
-          <path d="M44 9L29 0.339746V17.6603L44 9ZM0 10.5H30.5V7.5H0V10.5Z" fill="currentColor"/>
-          </svg>
-          </a>
+      <h1><?php echo $title?></h1>
+      <p><?php the_content(); ?></p>
+      <div class="partner-grid">
+      <?php while( $capabilities -> have_posts() ) : $capabilities -> the_post(); 
+      
+        $image = get_the_post_thumbnail_url( get_the_ID(), 'full' );
+        $link = get_field('capabilities_link');
+        $description = get_the_content();
+        ?>
+  
+        <div class="partner">
+            <a href="<?php echo $link; ?>" target="_blank"> 
+              <img class="partner-logo" src="<?php echo $image ?>');"/>
+            </a>
+            <p><?php echo $description ?></p>
         </div>
-        <div class="button-arrow capability">
-          <a href="#">ISO Accredation
-          <svg class="icon-arrow" width="44" viewBox="0 0 44 18" xmlns="http://www.w3.org/2000/svg">
-          <path d="M44 9L29 0.339746V17.6603L44 9ZM0 10.5H30.5V7.5H0V10.5Z" fill="currentColor"/>
-          </svg>
-          </a>
-        </div>
-        <div class="button-arrow capability">
-          <a href="#">Policies
-          <svg class="icon-arrow" width="44" viewBox="0 0 44 18" xmlns="http://www.w3.org/2000/svg">
-          <path d="M44 9L29 0.339746V17.6603L44 9ZM0 10.5H30.5V7.5H0V10.5Z" fill="currentColor"/>
-          </svg>
-          </a>
-        </div>
-      </div>
+       
+
+      <?php endwhile; wp_reset_postdata(); ?>
+
+      </div> 
     </div>
   </div>
-  <div>
-  <img class="bg-accent" src="<?php echo get_template_directory_uri(); ?>/media/images/img-waterhole.png" alt="<?php bloginfo( 'name' ); ?>" />
-  </div>
 </section>
+
+<?php endif; ?>
