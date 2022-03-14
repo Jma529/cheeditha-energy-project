@@ -29,7 +29,7 @@ $title = get_field('partner_title');
         ?>
   
         <div class="partner">
-            <a href="<?php echo $link; ?>"> 
+            <a href="<?php echo $link; ?>" target="_blank"> 
               <img class="partner-logo" src="<?php echo $image ?>');"/>
             </a>
             <p><?php echo $description ?></p>

@@ -610,7 +610,9 @@ input[type=submit]:focus {
 }
 @media only screen and (max-width: 768px) {
   .site-footer {
-    left: 0;
+    position: static;
+    display: flex;
+    justify-content: center;
     color: black;
   }
 }
@@ -1266,7 +1268,7 @@ table {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  padding: 10px 20px;
   background-color: black;
   opacity: 0;
   transition: all 0.5s ease;

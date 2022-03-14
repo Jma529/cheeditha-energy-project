@@ -176,6 +176,7 @@ require get_template_directory() . '/inc/template-tags.php';
 require get_template_directory() . '/cpt/cpt-team.php';
 require get_template_directory() . '/cpt/cpt-projects.php';
 require get_template_directory() . '/cpt/cpt-partners.php';
+require get_template_directory() . '/cpt/cpt-capabilities.php';
 /**
  * Functions which enhance the theme by hooking into WordPress.
  */

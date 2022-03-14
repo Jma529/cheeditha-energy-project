@@ -53,9 +53,7 @@ $highlight_4_sub = get_field('highlight_4_subheading');
     </div>
 
   </div>
-  <div>
-  <img class="bg-accent snake" src="<?php echo get_template_directory_uri(); ?>/media/images/img-snake.png" alt="<?php bloginfo( 'name' ); ?>" />
-  </div>
+
 
 
 
