@@ -19,7 +19,4 @@ $subtitle = get_field('contact_subtitle');
       </div>
     </div>
   </div>
-  <div>
-  <img class="bg-accent stingray" src="<?php echo get_template_directory_uri(); ?>/media/images/img-stingray.png" alt="<?php bloginfo( 'name' ); ?>" />
-  </div>
 </section>
