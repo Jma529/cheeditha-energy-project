@@ -26,7 +26,7 @@ $title = get_field('page_title');
       
         $image = get_the_post_thumbnail_url( get_the_ID(), 'full' );
         $link = get_field('capabilities_link');
-        $description = get_the_content();
+        $description = get_field('page_summary');
         ?>
   
         <div class="partner">
